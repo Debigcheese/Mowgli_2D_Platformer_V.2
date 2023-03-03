@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7813345855529017817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 7813345856905736599}
   - component: {fileID: 7813345856905736598}
   - component: {fileID: 7813345856905736585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -190,7 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 4917871339448768171, guid: e739a3b3ee0af0b489e9f80392a18b5b, type: 3}
   bodyCollider: {fileID: 7813345856905736585}
-  audiosource: {fileID: 3866020694028359748, guid: e739a3b3ee0af0b489e9f80392a18b5b, type: 3}
 --- !u!95 &7813345856905736596
 Animator:
   serializedVersion: 4

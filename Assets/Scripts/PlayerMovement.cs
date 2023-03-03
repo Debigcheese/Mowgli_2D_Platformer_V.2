@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     public float smoothTime = 0.2f;
     private float normalGravityScale;
     public bool isDead = false;
+    public ParticleSystem dust;
 
     [SerializeField] private AudioSource WalkSoundEffect;
     [SerializeField] private AudioSource JumpSoundEffect;
@@ -80,12 +81,13 @@ public class PlayerMovement : MonoBehaviour {
                 IsMoving = false;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) == true && isGrounded == true)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && isGrounded)
             {
                 isJumpPressed = true;
+                CreateDust();
                 animator.SetTrigger("DoJump");
                 JumpSoundEffect.Play();
-
+                
             }
 
             if (IsMoving)
@@ -93,12 +95,17 @@ public class PlayerMovement : MonoBehaviour {
                 if (isGrounded)
                 {
                     if (!WalkSoundEffect.isPlaying)
+                    {
+                        CreateDust();
                         WalkSoundEffect.Play();
+                    }
+                        
+
                 }
                 else
                     WalkSoundEffect.Stop();
             }
-            
+
 
             animator.SetBool("IsGrounded", isGrounded);
             animator.SetFloat("Speed", Mathf.Abs(moveDirection));
@@ -170,6 +177,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(IsWalled() && !IsGrounded() && moveDirection != 0f)
         {
+            CreateDust();
             isWallSliding = true;
             rigidBody2D.velocity = new Vector2(rigidBody2D.velocity.x, Mathf.Clamp(rigidBody2D.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
@@ -177,14 +185,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             isWallSliding = false;
         }
-
-        
+      
     }
 
     public void WallJump()
     {
         if (isWallSliding)
         {
+            CreateDust();
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
@@ -194,8 +202,9 @@ public class PlayerMovement : MonoBehaviour {
         {
             wallJumpingCounter -= Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f && canWallJump && !IsGrounded())
+        if((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.W)) && wallJumpingCounter > 0f && canWallJump && !IsGrounded())
         {
+            CreateDust();
             isJumpPressed = true;
             animator.SetTrigger("DoJump");
             JumpSoundEffect.Play();
@@ -246,6 +255,7 @@ public class PlayerMovement : MonoBehaviour {
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            
         }
     }
 
@@ -307,5 +317,15 @@ public class PlayerMovement : MonoBehaviour {
     public void IsAlive()
     {
         isDead = false;
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
+    }
+
+    void StopDust()
+    {
+        dust.Stop();
     }
 }

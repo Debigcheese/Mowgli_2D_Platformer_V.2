@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DeathCounter : MonoBehaviour
+public class TMPDeathcounter : MonoBehaviour
 {
     private static int deaths = 0;
-    public Text deathCounterText;
-    
+    public TextMeshProUGUI myTMP;
 
     public static int Deaths
     {
@@ -18,12 +17,10 @@ public class DeathCounter : MonoBehaviour
     public static void IncrementDeaths()
     {
         deaths++;
-        
     }
 
     private void Update()
     {
-        deathCounterText.text = Deaths.ToString();
-        
+        myTMP.text = Deaths.ToString();
     }
 }
