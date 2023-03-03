@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6987293946048706008}
   - component: {fileID: 6987293946048706000}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   jumpForce: 38.5
   smoothTime: 0.03
   isDead: 0
-  dust: {fileID: 0}
+  dust: {fileID: 3455384538270591601}
   WalkSoundEffect: {fileID: 6987293946048706009}
   JumpSoundEffect: {fileID: 6987293946048706008}
   groundcheck: {fileID: 6987293946165299703}

@@ -20986,6 +20986,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 42, y: 12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 5
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 64, y: 12, z: 0}
     second:
       serializedVersion: 2
@@ -21526,8 +21536,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 405e4163aae3fad42bf0d877b2b0def3, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 04633cc745a1f34409fef797cf3069f6, type: 2}
   - m_RefCount: 1
@@ -21563,8 +21573,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 216192134, guid: 3d200e1728ed6884badfea6add970ebf, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -621812436, guid: 3d200e1728ed6884badfea6add970ebf, type: 3}
   - m_RefCount: 1
@@ -21682,7 +21692,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 76
+  - m_RefCount: 77
     m_Data:
       e00: 1
       e01: 0
@@ -21719,7 +21729,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 85
+  - m_RefCount: 86
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -22572,7 +22582,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -906.1998, y: -550.07166}
+  m_Offset: {x: -865.9809, y: -556.99854}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22583,7 +22593,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2844238, y: 0.9348755}
+  m_Size: {x: 2.2103271, y: 1.6206055}
   m_EdgeRadius: 0
 --- !u!114 &1403016572
 MonoBehaviour:
