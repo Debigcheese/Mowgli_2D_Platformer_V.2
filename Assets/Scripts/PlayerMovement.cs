@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour {
                 else
                     WalkSoundEffect.Stop();
             }
+            
 
             animator.SetBool("IsGrounded", isGrounded);
             animator.SetFloat("Speed", Mathf.Abs(moveDirection));
@@ -204,7 +205,7 @@ public class PlayerMovement : MonoBehaviour {
             rigidBody2D.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 
-            if (transform.localScale.x != wallJumpingDirection)
+            if (transform.localScale.x != wallJumpingDirection )
             {
                 isFacingRight = !isFacingRight;
                 Vector3 localScale = transform.localScale;

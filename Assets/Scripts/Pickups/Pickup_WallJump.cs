@@ -37,11 +37,10 @@ public class Pickup_WallJump : MonoBehaviour
             {
                 playerMovement = collision.GetComponent<PlayerMovement>();
             }
-
+            particles.Play();
             playerMovement.canWallJump = true;
             audioSource.PlayOneShot(audioclip);
             spriteRenderer.enabled = false;
-            particles.Play();
             removeGameobject = true;
             spriteRenderer.sprite = null;
             

@@ -8,7 +8,6 @@ public class Kill_Enemy : MonoBehaviour
     private Animator animator;
     [SerializeField] private ParticleSystem particles;
     public Collider2D bodyCollider;
-    [SerializeField] private AudioSource audiosource;
 
     void Start()
     {
