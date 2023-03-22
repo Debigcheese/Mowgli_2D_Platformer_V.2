@@ -24019,7 +24019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 959593923}
-  playerstate: {fileID: 0}
+  playerstate: {fileID: 2098252638}
 --- !u!114 &959593926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26123,6 +26123,10 @@ PrefabInstance:
       propertyPath: dust
       value: 
       objectReference: {fileID: 1563977029}
+    - target: {fileID: 6987293946048706010, guid: d3b1854647480a04da97e73c8a13e089, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 959593925}
     - target: {fileID: 6987293946048706010, guid: d3b1854647480a04da97e73c8a13e089, type: 3}
       propertyPath: startPosition
       value: 
@@ -30059,7 +30063,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3026962544944970957, guid: 32e5ae0ede2845547b7edd9c703b893c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 32e5ae0ede2845547b7edd9c703b893c, type: 3}
 --- !u!224 &756005141419955920 stripped
 RectTransform:
